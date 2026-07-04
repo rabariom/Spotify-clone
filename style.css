@@ -11,6 +11,7 @@ body{
   display: flex;
   height: 100vh;
   padding: 0.15rem ;
+ 
 }
 
 .side_bar{
@@ -24,9 +25,10 @@ body{
 .main_content{
   background-color: #121212;
   flex: 1;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: auto;
   padding: 0 1.5rem 0 1.5rem;
+   margin-top: 0.3rem;
 }
 
 .music_player{
@@ -183,31 +185,24 @@ a{
   top: 0;
   background-color: #121212;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-left: 0rem;
-  gap: 1rem;
   align-items: center;
-  padding-top: 0rem;
-  padding-bottom: 0.5rem;
-  width: 100vh;
+  width: 100%;
+  padding: 0.75rem 0;
   z-index: 10;
 }
 
 .sticky-nav-options{
-  margin-right: 1rem;
+  
   gap: 1rem;
-  padding-top: 0.5rem;
+  padding-right: 0.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 #user{
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1rem;
-  padding: 0.2rem 0;
   opacity: 0.8;
 }
 
@@ -301,4 +296,179 @@ a{
   border-top: 1px solid white;
   opacity: 0.4;
 }
+
+.music_player{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album {
+  width: 25%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+
+}
+
+.player{
+  width: 50%;
+  
+}
+
+.controls{
+  width: 25%;
+ 
+}
+
+.player-control-icon{
+  height: 1rem;
+  margin: 0.4rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  opacity: 0.8;
+  user-select: none;
+  cursor: pointer;
+}
+
+.player-control-icon:hover {
+  opacity: 1;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.playback-bar{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-time, .total-time{
+  font-size: 0.8rem;
+  user-select: none;
+}
+
+.progress-bar{
+ -webkit-appearance: none;
+ appearance: none;
+ width: 50%;
+ height: 4px;
+ background: #4d4d4d;
+ border-radius: 2px;
+ cursor: pointer;
+ outline: none;
+}
+
+.progress-bar::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #1db954;
+  transition: transform 0.1s ease;
+}
+
+.progress-bar::-moz-range-thumb{
+
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #1db954;
+  border: none;
+  transition: transform 0.1s ease;
+}
+
+.progress-bar:hover::-webkit-slider-thumb{
+  transform: scale(1.2);
+  background: #1ed760;
+}
+
+.progress-bar:hover::-moz-range-thumb{
+  transform: scale(1.2);
+  background: #1ed760;
+}
+
+.album img{
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 2px;
+  margin-left: 12px;
+}
+.current-song p{
+  margin: 0;
+  padding: 0;
+  margin-left: 8px;
+}
+#p1{
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  user-select: none;
+ 
+}
+
+#p2{
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  opacity: 0.7;
+  user-select: none;
+}
+
+.like-picture{
+  display: inline-block;
+  justify-content: space-between;
+  right: 0;
+  margin-left: 4rem;
+  
+  
+}
+.like-picture i{
+  opacity: 0.8;
+}
+#like {
+  margin-right: 0.5rem;
+}
+.like-picture i:hover{
+  opacity: 1;
+}
+
+.controls {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;                 
+  padding-right: 0.75rem;
+}
+
+
+.control-icon {
+  font-size: 1rem;
+  color: #ffffff;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.control-icon:hover {
+  opacity: 1;                
+}
+
+
+.volume-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;              
+}
+
+
 
